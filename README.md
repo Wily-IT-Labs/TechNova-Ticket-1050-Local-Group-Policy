@@ -198,8 +198,7 @@ Executed `gpupdate /force`. Windows confirmed successful Computer Policy and Use
 
 ### 09 — Verifying Access Restriction
 Tested Control Panel access after applying the policy. Windows displayed a restriction message, demonstrating that the operation was blocked.
-
-![Control Panel Access Denied](screenshots/09-control-panel-access-denied.png)
+![Control Panel Access Denied](screenshots/09-control-panel-access-denied.png.png)
   
 ---
 
