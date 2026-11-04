@@ -153,8 +153,54 @@ Policy changes should be documented, verified, and reversible.
 
 ## 8. Evidence
 
-Screenshots documenting policy configuration, application, troubleshooting, and rollback are available in the `screenshots` directory.
 
+## 8. Evidence — Screenshots
+
+### 01 — Local Group Policy Editor
+Opened the Local Group Policy Editor (`gpedit.msc`) on PC01 to review Computer Configuration and User Configuration.
+
+![Local Group Policy Editor](screenshots/01-local-group-policy-editor.png)
+
+### 02 — Identifying the Control Panel Restriction
+Navigated to User Configuration > Administrative Templates > Control Panel and located the restriction policy, initially Not Configured.
+
+![Control Panel Policy](screenshots/02-control-panel-policy.png)
+
+### 03 — Reviewing Initial Policy Settings
+Opened the restriction policy to review its configuration options. The initial setting was Not Configured.
+
+![Initial Policy Settings](screenshots/03-initial-policy-settings.png)
+
+### 04 — Selecting the Non-Administrators GPO
+Used Microsoft Management Console (MMC) to select Local Computer\Non-Administrators as the Group Policy Object.
+
+![Selecting Non-Administrators GPO](screenshots/04-select-non-administrators-gpo.png)
+
+### 05 — Non-Administrators Policy Editor
+Verified the Non-Administrators Group Policy Object in MMC and expanded User Configuration.
+
+![Non-Administrators MMC](screenshots/05-non-administrators-mmc.png)
+
+### 06 — Locating the Restriction in MMC
+Located the Control Panel restriction under User Configuration > Administrative Templates > Control Panel within the Non-Administrators GPO.
+
+![Non-Admin Control Panel Policy](screenshots/06-non-admin-control-panel-policy.png)
+
+### 07 — Enabling the Control Panel Restriction
+Configured Prohibit access to Control Panel and PC settings to Enabled for the Non-Administrators policy.
+
+![Control Panel Policy Enabled](screenshots/07-control-panel-policy-enabled.png)
+
+### 08 — Refreshing Group Policy
+Executed `gpupdate /force`. Windows confirmed successful Computer Policy and User Policy updates.
+
+![Successful Group Policy Update](screenshots/08-gpupdate-success.png)
+
+### 09 — Verifying Access Restriction
+Tested Control Panel access after applying the policy. Windows displayed a restriction message, demonstrating that the operation was blocked.
+
+![Control Panel Access Denied](screenshots/09-control-panel-access-denied.png)
+  
 ---
 
 **Project:** TechNova IT Support Lab  
